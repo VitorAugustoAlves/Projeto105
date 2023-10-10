@@ -1,7 +1,7 @@
 import os
 import cv2
 
-path = "/images"
+path = "Projeto105-main/images"
 
 images =[]
 
@@ -52,7 +52,6 @@ if count > 0:
         img = cv2.imread(image_path)
         out.write(img)
     
-    # 6. Libera o recurso do VideoWriter
     out.release()
 
     print("Vídeo criado com sucesso.")
