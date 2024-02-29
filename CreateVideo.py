@@ -2,14 +2,10 @@ import os
 import cv2
 
 path = "Projeto105-main/images"
-
 images =[]
-
 imagens = os.listdir(path)
 
-
 for arquivo in imagens:
-
     img1, ext = os.path.splitext(arquivo)
     img2, ext = os.path.splitext(arquivo)
     img3, ext = os.path.splitext(arquivo)
@@ -20,21 +16,17 @@ for arquivo in imagens:
     img8, ext = os.path.splitext(arquivo)
     img9, ext = os.path.splitext(arquivo)
     img10, ext = os.path.splitext(arquivo)
-
-if ext in ['.jpeg']:
+if ext in ['.gif','.png','.jpg','.jpeg','.jfif']:
     file_name = path+'/'+arquivo
     print(file_name)
     images.append(file_name)
-
 else:
     print('{arquivo} tem uma extenção não suportada.')
-
 
 count = len(images)
 
 print("Lista de imagens:")
 print(images)
-
 print(f"Número total de imagens: {count}")
 
 if count > 0:
@@ -53,7 +45,6 @@ if count > 0:
         out.write(img)
     
     out.release()
-
     print("Vídeo criado com sucesso.")
     print("O vídeo 'Project.avi' está completo.")
 
